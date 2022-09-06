@@ -9,4 +9,4 @@ If you are going to learn React then create a repository and build many projects
 Don't worry about what other people say about your code.
 Professional programmers never judge your code as someone who is still learning, but collaborate on your projects to speed up your learning.
 
-I know. A professional programmer also knows. You should also know that we learn by making.
+I know. A professional programmer knows. You should also know that we learn by making.
