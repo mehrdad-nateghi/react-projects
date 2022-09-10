@@ -7,7 +7,9 @@ export default class Header extends Component {
         <h3 className="d-inline">Counters</h3>
 
         <span className="d-inline">
-          <span className="badge rounded-pill bg-danger mx-1">5</span>
+          <span className="badge rounded-pill bg-danger mx-1">
+            {this.props.totalCounters}
+          </span>
         </span>
 
         <h3 className="d-inline">
