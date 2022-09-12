@@ -36,7 +36,7 @@ export default class Counter extends Component {
 
             <button
               className="btn btn-sm btn-primary mx-2"
-              onClick={() => this.props.onDecrement(this.props.counter)}
+              onClick={() => this.props.onDelete(this.props.counter)}
             >
               X
             </button>

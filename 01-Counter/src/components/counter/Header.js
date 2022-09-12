@@ -13,7 +13,11 @@ export default class Header extends Component {
         </span>
 
         <h3 className="d-inline">
-          <button type="button" className="btn btn-outline-primary float-end">
+          <button
+            type="button"
+            className="btn btn-outline-primary float-end"
+            onClick={this.props.onReset}
+          >
             Reset
           </button>
         </h3>
