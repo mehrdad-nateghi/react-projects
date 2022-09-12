@@ -20,7 +20,12 @@ export default class Counter extends Component {
             </span>
           </div>
           <div className="col-md-10">
-            <button className="btn btn-sm btn-primary mx-2">+</button>
+            <button
+              className="btn btn-sm btn-primary mx-2"
+              onClick={() => this.props.onIncrement(this.props.counter)}
+            >
+              +
+            </button>
             <button className="btn btn-sm btn-primary mx-2">-</button>
             <button className="btn btn-sm btn-primary mx-2">X</button>
           </div>

@@ -12,12 +12,25 @@ export default class Counters extends Component {
     ],
   };
 
+  hadleIncrement = (counter) => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index].value++;
+    this.setState({ counters });
+  };
+
   render() {
     return (
       <div className="card shadow-lg w-50">
         <Header totalCounters={this.state.counters.length} />
         {this.state.counters.map((counter) => (
-          <Counter counter={counter} />
+          <Counter
+            key={counter.id}
+            counter={counter}
+            onIncrement={this.hadleIncrement}
+            //onDecrement={this.hadleIncrement()}
+            //onDelete={this.hadleIncrement()}
+          />
         ))}
         <Footer />
       </div>
