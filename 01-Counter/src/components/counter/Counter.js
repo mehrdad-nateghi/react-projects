@@ -26,11 +26,25 @@ export default class Counter extends Component {
             >
               +
             </button>
-            <button className="btn btn-sm btn-primary mx-2">-</button>
+
+            <button
+              className={this.formatDecrementBtn()}
+              onClick={() => this.props.onDecrement(this.props.counter)}
+            >
+              -
+            </button>
+
             <button className="btn btn-sm btn-primary mx-2">X</button>
           </div>
         </div>
       </div>
     );
+  }
+
+  formatDecrementBtn() {
+    const classStyle = "btn btn-sm btn-primary mx-2";
+    return this.props.counter.value === 0
+      ? `${classStyle} disabled`
+      : `${classStyle}`;
   }
 }
