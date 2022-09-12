@@ -7,9 +7,9 @@ export default class Counters extends Component {
   countersDefault = {};
   state = {
     counters: [
-      { id: 1, value: 0 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
+      { id: 1, value: 0, like: true },
+      { id: 2, value: 0, like: true },
+      { id: 3, value: 0, like: true },
     ],
   };
 
@@ -34,16 +34,16 @@ export default class Counters extends Component {
 
   handleReset = () => {
     const counters = [
-      { id: 1, value: 0 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
+      { id: 1, value: 0, like: true },
+      { id: 2, value: 0, like: true },
+      { id: 3, value: 0, like: true },
     ];
     this.setState({ counters });
   };
 
   render() {
     return (
-      <div className="card shadow-lg w-50">
+      <div className="card shadow-lg w-25">
         <Header
           totalCounters={this.state.counters.length}
           onReset={this.handleReset}

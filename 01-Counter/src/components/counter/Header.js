@@ -14,10 +14,10 @@ export default class Header extends Component {
 
         <h3 className="d-inline">
           <button
-            type="button"
             className="btn btn-outline-primary float-end"
             onClick={this.props.onReset}
           >
+            <i className="bi bi-arrow-clockwise"></i>
             Reset
           </button>
         </h3>
