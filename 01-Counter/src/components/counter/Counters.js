@@ -26,6 +26,11 @@ export default class Counters extends Component {
     this.setState({ counters });
   };
 
+  hadleDecrement = (counter) => {
+    const counters = this.state.counters.filter((c) => c.id != counter.id);
+    this.setState({ counters });
+  };
+
   render() {
     return (
       <div className="card shadow-lg w-50">
@@ -36,7 +41,7 @@ export default class Counters extends Component {
             counter={counter}
             onIncrement={this.hadleIncrement}
             onDecrement={this.hadleDecrement}
-            //onDelete={this.hadleIncrement()}
+            onDelete={this.hadleDelete}
           />
         ))}
         <Footer />
